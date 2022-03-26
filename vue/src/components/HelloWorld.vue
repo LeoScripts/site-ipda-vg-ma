@@ -1,6 +1,7 @@
 <template>
   <header>
-  
+      <Nav />
+
   </header>
   <v-container>
 
@@ -8,7 +9,7 @@
     
   </div>
 
-      <v-carousel
+  <v-carousel
     cycle
     height="400"
     hide-delimiter-background
@@ -36,7 +37,6 @@
   </v-carousel>
   </v-container>
 
-  <Nav />
 </template>
 
 <script>
