@@ -1,11 +1,15 @@
 <template>
   <header>
       <Nav />
-
   </header>
   <v-container>
 
-
+    <div class="card-container">
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+    </div>
 
   </v-container>
 
@@ -13,32 +17,28 @@
 
 <script>
   import Nav from './Nav.vue'
+  import Card from './Card.vue'
   
 
   export default {
     name:'HelloWorld',
     components: {
-      Nav
+      Nav,
+      Card
+
     },
     data () {
       return {
         
-        
-        colors: [
-          'indigo',
-          'warning',
-          'pink darken-2',
-          'red lighten-1',
-          'deep-purple accent-4',
-        ],
-        slides: [
-          'First',
-          'Second',
-          'Third',
-          'Fourth',
-          'Fifth',
-        ],
       }
     },
   }
 </script>
+
+<style>
+  .card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
+    gap: 20px;
+  }
+</style>
