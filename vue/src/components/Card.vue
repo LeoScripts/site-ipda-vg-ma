@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <h2>Cultos Semanais</h2>
+    <strong>Dia-semana</strong>
     <img class="img-card" width="200" :src=img alt="">
   </div>
 </template>
@@ -28,6 +28,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #313D86;
   }
 
   .img-card{

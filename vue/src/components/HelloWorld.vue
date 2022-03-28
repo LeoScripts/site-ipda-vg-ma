@@ -4,27 +4,33 @@
   </header>
   <v-container>
 
+  <section>
+    <h2>Cultos</h2>
     <div class="card-container">
       <Card />
       <Card />
       <Card />
       <Card />
     </div>
-
+  </section>
   </v-container>
+  <Footer />
+  
 
 </template>
 
 <script>
   import Nav from './Nav.vue'
   import Card from './Card.vue'
+  import Footer from './Footer.vue'
   
 
   export default {
     name:'HelloWorld',
     components: {
       Nav,
-      Card
+      Card,
+      Footer
 
     },
     data () {
