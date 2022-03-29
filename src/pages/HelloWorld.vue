@@ -25,10 +25,10 @@
 </template>
 
 <script>
-import Nav from "./Nav.vue";
-import Card from "./Card.vue";
-import Footer from "./Footer.vue";
-import Form from "./Form.vue";
+import Nav from "../components/Nav.vue";
+import Card from "../components/Card.vue";
+import Footer from "../components/Footer.vue";
+import Form from "../components/Form.vue";
 
 import a from "../assets/a.jpg"
 import b from "../assets/b.png"
