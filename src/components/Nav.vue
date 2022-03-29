@@ -3,7 +3,7 @@
     <v-app-bar color="#FFF" dark>
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
-      <img width="400" :src="logo" alt="" />
+      <img class="logo" :src="logo" alt="" />
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" temporary>
@@ -62,3 +62,24 @@ export default {
   }),
 };
 </script>
+
+<style>
+
+@media (max-width: 519px) {
+  .logo {
+    width: 80%;
+  }
+}
+
+@media (min-width: 520px) {
+  .logo {
+    width: 70%;
+  }
+}
+
+@media (min-width: 998px) {
+  .logo {
+    width: 25%;
+  }
+}
+</style>
