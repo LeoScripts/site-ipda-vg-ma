@@ -37,7 +37,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name:"Form"
+};
 </script>
 
 <style>

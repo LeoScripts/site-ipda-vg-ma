@@ -38,7 +38,7 @@ import e from "../assets/e.jpg"
 
 
 export default {
-  name: "HelloWorld",
+  name: "Home",
   components: {
     Nav,
     Card,

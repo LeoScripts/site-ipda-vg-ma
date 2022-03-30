@@ -52,6 +52,7 @@ import logo from "../assets/logo.png";
 import Slide from "./Slide.vue";
 
 export default {
+  name:"Nave",
   components: {
     Slide,
   },
