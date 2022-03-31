@@ -13,6 +13,7 @@
     "@mdi/font": "5.9.55",
     "axios": "^0.26.1",
     "dotenv": "^16.0.0",
+    "firebase": "^9.6.10",
     "jsonwebtoken": "^8.5.1",
     "node-sass": "^7.0.1",
     "roboto-fontface": "*",
