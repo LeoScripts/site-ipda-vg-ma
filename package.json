@@ -28,6 +28,7 @@
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.12.3",
     "@vitejs/plugin-vue": "^2.2.0",
+    "@vue/test-utils": "^2.0.0-rc.17",
     "@vuetify/vite-plugin": "^1.0.0-alpha.0",
     "sass": "^1.38.0",
     "sass-loader": "^10.0.0",
