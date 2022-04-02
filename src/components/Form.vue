@@ -1,45 +1,70 @@
 <template>
   <section class="form-container">
-    <form action="" method="post">
+    <!-- <form >
       <h2>Envie Sua Mensagem</h2>
 
       <div class="campo">
         <label for="name">Nome</label>
-        <input class="input-info" type="text" id="name" required/>
+        <input class="input-info" v-model="name" type="text" id="name" required/>
       </div>
 
       <div class="campo">
         <label for="tel">Telefone</label>
-        <input class="input-info" type="tel" id="tel" name="tel" required/>
+        <input class="input-info" v-model="tel" type="tel" id="tel" name="tel" required/>
       </div>
 
       <div class="campo">
         <label for="email">Email</label>
-        <input class="input-info" type="email" id="email" name="email" required/>
+        <input class="input-info" v-model="email" type="email" id="email" name="email" required/>
       </div>
 
       <div>
         <textarea
+        v-model="msg"
           name="msg"
           id="msg"
           placeholder="Escreva sua messagem aqui!"
           class="textarea"
           required
         ></textarea>
-      </div>
+      </div> -->
 
-      <button class="button-submit" type="submit">
-        <strong class="button-submit_text">ENVIAR</strong>
+      <div>
+    <input type="file" name="file" multiple ref="files" />
+    <button @click="sendFile">Send</button>
+  </div>
+
+      <!-- <button class="button-submit" type="submit">
+        <strong @click="submit" class="button-submit_text">ENVIAR</strong>
       </button>
-    </form>
+    </form> -->
 
   </section>
 </template>
 
 <script>
+
+
+
+
 export default {
-  name:"Form"
+  name: 'Form',
+  methods: {
+    async sendFile() {
+      let dataForm = new FormData();
+      for (let file of this.$refs.files.files) {
+        dataForm.append(`file`, file);
+      }
+      let res = await fetch(`http://localhost:8080/upload`, {
+        method: 'POST',
+        body: dataForm,
+      });
+      let data = await res.json();
+      // console.log(data);
+    },
+  },
 };
+
 </script>
 
 <style>
