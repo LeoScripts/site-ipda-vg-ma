@@ -13,7 +13,9 @@ export default defineConfig({
       autoImport: true,
     }),
   ],
-  define: { 'process.env': {} },
+  define: { 'process.env': {
+    LOGINKEY:"ipdavg2022"
+  } },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),

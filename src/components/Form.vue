@@ -1,70 +1,92 @@
 <template>
-  <section class="form-container">
-    <!-- <form >
+  <section class="form-container" v-on:submit.prevent="postUser">
+    <form>
       <h2>Envie Sua Mensagem</h2>
 
       <div class="campo">
         <label for="name">Nome</label>
-        <input class="input-info" v-model="name" type="text" id="name" required/>
+        <input
+          class="input-info"
+          v-model="dataForm.name"
+          type="text"
+          required
+        />
       </div>
 
       <div class="campo">
         <label for="tel">Telefone</label>
-        <input class="input-info" v-model="tel" type="tel" id="tel" name="tel" required/>
+        <input
+          class="input-info"
+          v-model="dataForm.tel"
+          type="tel"
+          id="tel"
+          name="tel"
+          required
+        />
       </div>
 
       <div class="campo">
         <label for="email">Email</label>
-        <input class="input-info" v-model="email" type="email" id="email" name="email" required/>
+        <input
+          class="input-info"
+          v-model="dataForm.email"
+          type="email"
+          id="email"
+          name="email"
+          required
+        />
       </div>
 
       <div>
         <textarea
-        v-model="msg"
+          v-model.lazy="dataForm.msg"
           name="msg"
           id="msg"
           placeholder="Escreva sua messagem aqui!"
           class="textarea"
           required
         ></textarea>
-      </div> -->
+      </div>
 
-      <div>
-    <input type="file" name="file" multiple ref="files" />
-    <button @click="sendFile">Send</button>
-  </div>
-
-      <!-- <button class="button-submit" type="submit">
-        <strong @click="submit" class="button-submit_text">ENVIAR</strong>
+      <button class="button-submit" type="submit">
+        <strong @click="postUser" class="button-submit_text">ENVIAR</strong>
       </button>
-    </form> -->
-
+    </form>
   </section>
 </template>
 
 <script>
-
-
-
+import httpService from "../services/httpService";
 
 export default {
-  name: 'Form',
+  name: "User",
+  data() {
+    return { 
+      dataForm:{ 
+        loginKey:process.env.LOGINKEY,
+        name:'', 
+        email:'', 
+        tel:'', 
+        msg:'' 
+        }
+    };
+  },
+  created() {
+    this.postUser();
+  },
   methods: {
-    async sendFile() {
-      let dataForm = new FormData();
-      for (let file of this.$refs.files.files) {
-        dataForm.append(`file`, file);
-      }
-      let res = await fetch(`http://localhost:8080/upload`, {
-        method: 'POST',
-        body: dataForm,
-      });
-      let data = await res.json();
-      // console.log(data);
+    postUser() {
+      httpService
+        .post('/user', this.dataForm)
+        .then(() => {
+          console.log("Usuário cadastrado com sucesso");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     },
   },
 };
-
 </script>
 
 <style>
@@ -75,13 +97,13 @@ export default {
   justify-content: center;
 }
 
-form{
-  background: #CCC;
+form {
+  background: #ccc;
   padding: 2rem;
   border-radius: 1rem;
 }
 
-.campo{
+.campo {
   margin: 0.5rem 0;
 }
 
@@ -97,7 +119,7 @@ label {
 }
 
 .textarea {
-margin: 1rem 0 0.5rem 0;
+  margin: 1rem 0 0.5rem 0;
   width: 100%;
   border-radius: 0.2rem;
   background: #fff;
@@ -112,7 +134,7 @@ margin: 1rem 0 0.5rem 0;
   width: 100%;
 }
 
-.button-submit_text{
+.button-submit_text {
   color: #fff;
 }
 </style>
