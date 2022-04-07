@@ -16,7 +16,7 @@
             <v-list-item-icon>
               <v-icon>mdi-Navigation</v-icon>
             </v-list-item-icon>
-            <a href="http://" target="_blank">
+            <a href="https://goo.gl/maps/G4QuhrYgReZcb72v6" target="_blank">
               <v-list-item-title> <b>ENDEREÇO</b> </v-list-item-title>
             </a>
           </v-list-item>
@@ -25,8 +25,8 @@
             <v-list-item-icon>
               <v-icon>mdi-Navigation</v-icon>
             </v-list-item-icon>
-            <a href="https://goo.gl/maps/rbWR4f1HsvTEMsPV7" target="_blank">
-              <v-list-item-title></v-list-item-title>
+            <a href="mailto:ipdavgma@gmail.com" type="mailto" target="_blank">
+              <v-list-item-title>EMAIL</v-list-item-title>
             </a>
           </v-list-item>
 
@@ -36,8 +36,8 @@
             <v-list-item-icon>
               <v-icon>mdi-Navigation</v-icon>
             </v-list-item-icon>
-            <a href="http://" target="_blank">
-              <v-list-item-title></v-list-item-title>
+            <a href="tel:+5598991005881" target="_blank">
+              <v-list-item-title>TELEFONE</v-list-item-title>
             </a>
           </v-list-item>
         </v-list-item-group>
