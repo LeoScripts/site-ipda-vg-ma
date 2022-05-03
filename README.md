@@ -6,7 +6,7 @@
   <!-- <a href="https://vue.netlify.app">Demo</a> -->
 </div>
 
-<h1 align="center">Vue</h1>
+<h1 align="center">Site IPDA Vargem Grande - MA</h1>
 
 <p align="center">
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/LeoScripts/vue?color=56BEB8">
@@ -19,13 +19,12 @@
 
 </p>
 
-<!-- Status -->
+Status
 
-<!-- <h4 align="center"> 
 	🚧  Vue 🚀 Under construction...  🚧
 </h4> 
 
-<hr> -->
+
 
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0; 
@@ -39,11 +38,12 @@
 
 <br>
 
-## :dart: About ##
+## :dart: About ## 
 
 ipda Vargem Grande-Ma  website 
 
-## :sparkles: Features ##
+## :sparkles: Features ## ![visitors](https://visitor-badge-reloaded.herokuapp.com/badge?page_id=IPDA-VG&color=56BEB8)
+ 
 
 :heavy_check_mark: Feature 1 responsive;\
 :heavy_check_mark: Feature 2 get data and send it to api;\
